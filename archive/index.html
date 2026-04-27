@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Literacy Archive — Conversation Index</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdfdfc;--surface:#fff;--border:#e1e4e8;--text:#1a1a1a;--muted:#57606a;--navy:#1e3a5f;--prompt-bg:#f6f8fa;--serif:'DM Serif Display',serif;--sans:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace;}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--navy:#7bbde8;--prompt-bg:#21262d;}}
+*{box-sizing:border-box}body{font-family:var(--sans);background:var(--bg);color:var(--text);max-width:850px;margin:0 auto;padding:3rem 1.5rem 4rem;line-height:1.6;}
+.header{border-bottom:2px solid var(--navy);padding-bottom:1.5rem;margin-bottom:2rem;}
+.meta{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;}
+h1{font-family:var(--serif);font-weight:400;font-size:2rem;margin:0 0 .5rem;color:var(--navy);line-height:1.2;}
+.crumbs{font-size:.85rem;color:var(--muted);margin-top:.5rem;}
+.crumbs a{color:var(--navy);text-decoration:none;} .crumbs a:hover{text-decoration:underline;}
+.summary{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--navy);border-radius:4px;padding:1.75rem 2rem;margin-bottom:3rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.summary h2{font-family:var(--serif);font-weight:400;font-size:1.15rem;margin:0 0 1rem;color:var(--navy);}
+.summary p{margin:0 0 1em;} .summary p:last-child{margin:0;}
+.archive-label{font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:2.5rem 0 .75rem;}
+details.exchange{border:1px solid var(--border);border-radius:6px;margin-bottom:.4rem;background:var(--surface);overflow:hidden;}
+details.exchange summary{padding:.85rem 1.25rem;cursor:pointer;background:var(--prompt-bg);list-style:none;display:flex;align-items:baseline;gap:1rem;font-size:.9rem;}
+details.exchange summary::-webkit-details-marker{display:none;}
+details.exchange summary::before{content:"▸";color:var(--navy);flex-shrink:0;transition:transform .15s;}
+details.exchange[open] summary::before{transform:rotate(90deg);}
+details.exchange summary .num{font-family:var(--mono);font-size:.72rem;color:var(--muted);flex-shrink:0;min-width:2.5rem;}
+details.exchange summary .preview{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text);}
+details.exchange[open] summary{border-bottom:1px solid var(--border);}
+.prompt{background:var(--prompt-bg);padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:.82rem;white-space:pre-wrap;word-wrap:break-word;}
+.response{padding:1.5rem;font-size:.95rem;}
+.response>:first-child{margin-top:0;} .response>:last-child{margin-bottom:0;}
+.response pre{background:var(--prompt-bg);padding:1rem;border-radius:4px;overflow-x:auto;font-family:var(--mono);font-size:.82rem;line-height:1.5;}
+.response code{font-family:var(--mono);font-size:.85em;background:var(--prompt-bg);padding:.1em .35em;border-radius:3px;}
+.response pre code{background:none;padding:0;}
+.response blockquote{border-left:3px solid var(--navy);margin:1em 0;padding-left:1rem;color:var(--muted);}
+.response h1,.response h2,.response h3,.response h4{font-family:var(--serif);font-weight:400;color:var(--navy);}
+.response h1{font-size:1.4rem;}.response h2{font-size:1.2rem;}.response h3{font-size:1.05rem;}
+.response table{border-collapse:collapse;margin:1em 0;}
+.response th,.response td{border:1px solid var(--border);padding:.5em .75em;text-align:left;}
+.response th{background:var(--prompt-bg);}
+.response ul,.response ol{padding-left:1.5rem;}
+.footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:.72rem;color:var(--muted);text-align:center;}
+.redaction-note{background:var(--prompt-bg);border:1px dashed var(--border);border-radius:4px;padding:.75rem 1rem;margin:1rem 0 2rem;font-size:.8rem;color:var(--muted);}
+.skip-link{position:absolute;top:-100px;left:0;background:var(--navy);color:#fff;padding:.6rem 1rem;text-decoration:none;z-index:1000;font-size:.9rem;border-radius:0 0 4px 0;}
+.skip-link:focus{top:0;outline:2px solid #fff;outline-offset:-4px;}
+*:focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:2px;}
+
+ul.archive-list{list-style:none;padding:0;}
+ul.archive-list li{padding:1rem 0;border-bottom:1px solid var(--border);}
+ul.archive-list li a{color:var(--navy);text-decoration:none;font-weight:500;}
+ul.archive-list li a:hover{text-decoration:underline;}
+.row-meta{display:block;font-family:var(--mono);font-size:.75rem;color:var(--muted);margin-top:.25rem;}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<main id="main">
+<div class="header">
+  <div class="meta">Archive Index · 12 conversations</div>
+  <h1>AI Literacy Curriculum — Conversation Archive</h1>
+  <div class="crumbs" style="font-size:.85rem;color:var(--muted);margin-top:.5rem;"><a href="../index.html" style="color:var(--navy);text-decoration:none;">← AI Literacy Curriculum</a></div>
+</div>
+<div class="summary">
+  <h2>About this archive</h2>
+  <p>Conversations between Steve Schneider and Claude that produced the Learner's Permit and Agentic License scaffolds for AI literacy curriculum at SUNY. Each entry preserves the exchange in full — prompts and responses, in order — alongside the conversation summary generated at export.</p>
+  <p>Personal references have been redacted. See the repository README for the redaction practice.</p>
+</div>
+<div class="redaction-note">Personal references — collaborator names, email addresses, message headers — have been redacted from this archive. Redactions appear as <code>[redacted]</code>. The unredacted source is retained locally and is not part of this repository.</div>
+<ul class="archive-list">
+<li><a href="2026-02-25-ai-literacy-development-through-iterative-refinement.html">AI literacy development through iterative refinement</a><span class="row-meta">2026-02-25 · 52 exchanges</span></li><li><a href="2026-03-01-ai-fye-document-structure-and-course-design.html">AI-FYE document structure and course design</a><span class="row-meta">2026-03-01 · 10 exchanges</span></li><li><a href="2026-03-01-ai-integration-across-course-levels.html">AI integration across course levels</a><span class="row-meta">2026-03-01 · 2 exchanges</span></li><li><a href="2026-03-02-ai-literacy-curriculum-project-invitation.html">AI literacy curriculum project invitation</a><span class="row-meta">2026-03-02 · 9 exchanges</span></li><li><a href="2026-03-03-ai-document-edits-and-review.html">AI document edits and review</a><span class="row-meta">2026-03-03 · 35 exchanges</span></li><li><a href="2026-03-04-the-teacher-the-student-and-the-llm.html">The teacher, the student and the LLM</a><span class="row-meta">2026-03-04 · 13 exchanges</span></li><li><a href="2026-03-05-seeking-feedback.html">Seeking feedback</a><span class="row-meta">2026-03-05 · 16 exchanges</span></li><li><a href="2026-03-08-ai-adoption-in-academic-integrity-and-learning-outcomes.html">AI adoption in academic integrity and learning outcomes</a><span class="row-meta">2026-03-08 · 1 exchange</span></li><li><a href="2026-03-09-ai-literacy-progression-framework.html">AI literacy progression framework</a><span class="row-meta">2026-03-09 · 4 exchanges</span></li><li><a href="2026-03-10-project-context-report-generation.html">Project context report generation</a><span class="row-meta">2026-03-10 · 3 exchanges</span></li><li><a href="2026-03-10-project-memory-update.html">Project memory update</a><span class="row-meta">2026-03-10 · 11 exchanges</span></li><li><a href="2026-03-14-processing-podcast-links-with-curriculum-tagging.html">Processing podcast links with curriculum tagging</a><span class="row-meta">2026-03-14 · 76 exchanges</span></li>
+</ul>
+</main>
+</body>
+</html>

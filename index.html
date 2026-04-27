@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Literacy Curriculum — SUNY</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdfdfc;--surface:#fff;--border:#e1e4e8;--text:#1a1a1a;--muted:#57606a;--navy:#1e3a5f;--crimson:#7a1c2c;--prompt-bg:#f6f8fa;--serif:'DM Serif Display',serif;--sans:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace;}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--navy:#7bbde8;--crimson:#e06c75;--prompt-bg:#21262d;}}
+*{box-sizing:border-box}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);max-width:850px;margin:0 auto;padding:3rem 1.5rem 4rem;line-height:1.6;}
+.header{border-bottom:2px solid var(--navy);padding-bottom:1.5rem;margin-bottom:2.5rem;}
+.eyebrow{font-family:var(--mono);font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;}
+h1{font-family:var(--serif);font-weight:400;font-size:2.2rem;margin:0 0 .5rem;color:var(--navy);line-height:1.15;}
+.subtitle{color:var(--muted);font-size:1rem;margin:0;}
+.intro{font-size:1.05rem;margin-bottom:3rem;}
+.intro p{margin:0 0 1em;}
+.intro p:last-child{margin:0;}
+.cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:3rem;}
+@media (min-width:640px){.cards{grid-template-columns:1fr 1fr;}.cards .card.archive{grid-column:1/-1;}}
+.card{display:block;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--navy);border-radius:6px;padding:1.5rem 1.75rem;text-decoration:none;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .15s,box-shadow .15s;}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08);border-left-color:var(--crimson);}
+.card .label{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.5rem;}
+.card h2{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin:0 0 .5rem;color:var(--navy);}
+.card p{margin:0;font-size:.9rem;color:var(--text);}
+.card .meta{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-top:.75rem;}
+.section{margin-bottom:2rem;}
+.section h3{font-family:var(--serif);font-weight:400;font-size:1.1rem;color:var(--navy);margin:0 0 .75rem;}
+.section p{margin:0 0 .75rem;font-size:.92rem;}
+.footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+.footer p{margin:.25rem 0;}
+
+.skip-link{position:absolute;top:-100px;left:0;background:var(--navy);color:#fff;padding:.6rem 1rem;text-decoration:none;z-index:1000;font-family:var(--sans,sans-serif);font-size:.9rem;border-radius:0 0 4px 0;}
+.skip-link:focus{top:0;outline:2px solid #fff;outline-offset:-4px;}
+*:focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:2px;}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<main id="main"><div class="header">
+  <div class="eyebrow">SUNY AI Fellows for the Public Good · 2025–2026</div>
+  <h1>AI Literacy Curriculum</h1>
+  <p class="subtitle">Reading, thinking, and writing with the tools, techniques, and technological systems consistent with one's peers.</p>
+</div>
+
+<div class="intro">
+<p>This site holds the working materials of an AI literacy curriculum developed at SUNY Polytechnic Institute. Two scaffolds are in use: a content-neutral <strong>Learner's Permit</strong> covering foundational generative AI literacy, and a more advanced <strong>Commercial License</strong> covering agentic AI operation.</p>
+<p>The transcripts of the conversations that produced these scaffolds are also archived here. The transcript is the work; the artifact is evidence the work concluded.</p>
+</div>
+
+<div class="cards">
+  <a class="card" href="ai-literacy-learners-permit.html">
+    <div class="label">Scaffold · 15 exercises · ~5 hours</div>
+    <h2>Learner's Permit</h2>
+    <p>Foundational generative AI literacy. A content-neutral exercise sequence in three phases: Learning to Drive, Reading with the Model, Independent Operation. Exercise 15 is the exam.</p>
+    <div class="meta">v6 · stable</div>
+  </a>
+  <a class="card" href="ai-literacy-commercial-license.html">
+    <div class="label">Scaffold · 15 exercises · ~15 hours</div>
+    <h2>Commercial License</h2>
+    <p>Agentic AI operation. A 15-exercise scaffold extending the Learner's Permit into agent-directed work, with a workbench for briefs, scripts, traces, and failure documentation.</p>
+    <div class="meta">draft · in development</div>
+  </a>
+  <a class="card archive" href="archive/index.html">
+    <div class="label">Conversation Archive · 12 conversations</div>
+    <h2>How these scaffolds were made</h2>
+    <p>The full record of the conversations between the author and Claude that produced the two scaffolds. Each archived conversation preserves prompts and responses in order, with the conversation summary at top. Personal references redacted.</p>
+  </a>
+</div>
+
+<div class="section">
+<h3>About the framework</h3>
+<p>The curriculum treats AI as cognitive infrastructure, not subject matter. Students develop literacy <em>through</em> AI, not <em>about</em> it. Every exercise produces two artifacts: the model's final response and the full transcript of the exchange that produced it. The transcript is the primary evidence of thinking; the artifact is evidence the work concluded.</p>
+</div>
+
+<div class="section">
+<h3>Using this resource</h3>
+<p>These curriculum scaffolds were built through extensive conversation with Claude about the goals of each exercise, and they embed a particular vision of AI literacy: students should read, think, and write with AI tools purposively, developing habits of validation and verification that buttress their use. The scaffolds are also designed to be generative. The HTML files and transcript <code>.md</code> files can be uploaded to any LLM to produce your own curriculum variants or exercises. The resulting HTML artifacts can be uploaded directly to Brightspace or equivalent LMS.</p>
+<p>The hosted version of this curriculum is at <a href="https://stevesunypoly.github.io/ai-literacy-2026/">stevesunypoly.github.io/ai-literacy-2026/</a>. Source files are available at <a href="https://github.com/stevesunypoly/ai-literacy-2026">github.com/stevesunypoly/ai-literacy-2026</a>.</p>
+</div>
+
+<div class="footer">
+  <p>Steven M. Schneider · Professor of Communications &amp; Humanities, SUNY Polytechnic Institute</p>
+  <p>Co-Director, Artificial Intelligence Exploration (AIX) Center · SUNY AI Fellow for the Public Good (2025–2026)</p>
+  <p>Released under Creative Commons Attribution 4.0 (CC BY 4.0) where applicable.</p>
+</div>
+</main>
+</body>
+</html>
